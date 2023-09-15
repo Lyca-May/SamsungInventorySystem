@@ -6,7 +6,7 @@ $host = "localhost";
 $username = "root";
 $password = "";
 $database = "samsunginventorydb";
-$port = "3307";
+$port = "3306";
 
 // Create a database connection
 $conn = new mysqli($host, $username, $password, $database, $port);

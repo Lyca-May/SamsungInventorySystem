@@ -42,7 +42,7 @@
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    width: 228px; 
+    width: 215px; 
     text-align: center;
 }
 
@@ -76,7 +76,6 @@ p {
 
 /*Tables*/
 
-/* CSS for table container */
 /* CSS for table container */
 .table-container {
     display: flex;
@@ -121,3 +120,24 @@ p {
 .data-table tr:hover {
     background-color: #ddd;
 }
+
+.datatable-container {
+    /* margin-top: 10px; Adjust the margin-top as needed to create space */
+    margin-left: 15px; /* Adjust the margin-left to position the table */
+    width: 80%; /* Adjust the width as needed */
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+} 
+
+.datatable-container1 {
+    /* margin-top: 10px; Adjust the margin-top as needed to create space */
+    margin-left: 15px; /* Adjust the margin-left to position the table */
+    width: 80%; /* Adjust the width as needed */
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+} 
+

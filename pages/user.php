@@ -71,7 +71,7 @@ include("./functions/userManagementFunction.php");
         <br>
         <br>
         <br>
-        <table id="tableID" class="display">
+        <table id="tableID3" class="display">
             <thead>
                 <tr>
                 <th>User ID</th>

@@ -1,14 +1,21 @@
-<?php
-include("./functions/countData.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Datatable plugin CSS file -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+
+    <!-- jQuery library file -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Datatable plugin JS library file -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <title>Four Cards in a Column</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/index.js"></script>
+
 </head>
 
 <body>
@@ -19,25 +26,25 @@ include("./functions/countData.php");
             </div>
             <div class="card-container">
                 <div class="card">
-                    <h2>Users</h2>
-                    <p><?php echo $countUsersquery; ?></p>
+                    <h2>Card 1</h2>
+                    <p>This is the content of Card 1.</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
                 <div class="card">
-                    <h2>Products</h2>
-                    <p><?php echo $countProductquery; ?></p>
+                    <h2>Card 2</h2>
+                    <p>This is the content of Card 2. </p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
                 <div class="card">
-                    <h2>Categories</h2>
-                    <p><?php echo $countCategoriesQuery; ?></p>
+                    <h2>Card 3</h2>
+                    <p>This is the content of Card 3. </p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
-                <!-- <div class="card">
+                <div class="card">
                     <h2>Card 4</h2>
                     <p>This is the content of Card 4. </p>
                     <a href="#" class="btn">Learn More</a>
-                </div> -->
+                </div>
             </div>
             <br>
             <hr>
@@ -45,92 +52,148 @@ include("./functions/countData.php");
 
             <!-- /* TABLE SECTION */ -->
 
-            <div>
-                <div class="table-container">
-                    <div class="table-wrapper">
-                        <table class="data-table">
-                            <!-- Table 1 content -->
-                            <caption><b>Table 1 </b></caption>
-                            <thead>
-                                <tr>
-                                    <th>Column 1</th>
-                                    <th>Column 2</th>
-                                    <th>Column 3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Data 1</td>
-                                    <td>Data 2</td>
-                                    <td>Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Data 4</td>
-                                    <td>Data 5</td>
-                                    <td>Data 6</td>
-                                </tr>
-                                <!-- Add more rows as needed -->
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- Add more tables here -->
-                    <div class="table-wrapper">
-                        <table class="data-table">
-                            <!-- Table 2 content -->
-                            <caption><b>Table 2 </b></caption>
-                            <thead>
-                                <tr>
-                                    <th>Table 2 Column 1</th>
-                                    <th>Table 2 Column 2</th>
-                                    <th>Table 2 Column 3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Table 2 Data 1</td>
-                                    <td>Table 2 Data 2</td>
-                                    <td>Table 2 Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Table 2 Data 4</td>
-                                    <td>Table 2 Data 5</td>
-                                    <td>Table 2 Data 6</td>
-                                </tr>
-                                <!-- Add more rows as needed -->
-                            </tbody>
-                        </table>
+                <div>
+                    <div class="table-container">
+                        <div class="table-wrapper">
+                            <div class="datatable-container1">
+                                <!-- HTML table with student data -->
+                                <br>
+                                <table id="tableID1" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>StudentID</th>
+                                            <th>StudentName</th>
+                                            <th>Age</th>
+                                            <th>Gender</th>
+                                            <th>Marks Scored</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ST1</td>
+                                            <td>Prema</td>
+                                            <td>35</td>
+                                            <td>Female</td>
+                                            <td>320</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST2</td>
+                                            <td>Wincy</td>
+                                            <td>36</td>
+                                            <td>Female</td>
+                                            <td>170</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST6</td>
+                                            <td>William</td>
+                                            <td>37</td>
+                                            <td>Female</td>
+                                            <td>372</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST10</td>
+                                            <td>Frost</td>
+                                            <td>29</td>
+                                            <td>male</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST13</td>
+                                            <td>Kennedy</td>
+                                            <td>43</td>
+                                            <td>male</td>
+                                            <td>313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST14</td>
+                                            <td>Fiza</td>
+                                            <td>31</td>
+                                            <td>Female</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST15</td>
+                                            <td>Silva</td>
+                                            <td>34</td>
+                                            <td>male</td>
+                                            <td>985</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Add more tables here -->
+                        <div class="table-wrapper">
+                            <div class="datatable-container">
+                                <!-- HTML table with student data -->
+                                <br>
+                                <table id="tableID2" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>StudentID</th>
+                                            <th>StudentName</th>
+                                            <th>Age</th>
+                                            <th>Gender</th>
+                                            <th>Marks Scored</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ST1</td>
+                                            <td>Prema</td>
+                                            <td>35</td>
+                                            <td>Female</td>
+                                            <td>320</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST2</td>
+                                            <td>Wincy</td>
+                                            <td>36</td>
+                                            <td>Female</td>
+                                            <td>170</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST6</td>
+                                            <td>William</td>
+                                            <td>37</td>
+                                            <td>Female</td>
+                                            <td>372</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST10</td>
+                                            <td>Frost</td>
+                                            <td>29</td>
+                                            <td>male</td>
+                                            <td>300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST13</td>
+                                            <td>Kennedy</td>
+                                            <td>43</td>
+                                            <td>male</td>
+                                            <td>313</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST14</td>
+                                            <td>Fiza</td>
+                                            <td>31</td>
+                                            <td>Female</td>
+                                            <td>750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ST15</td>
+                                            <td>Silva</td>
+                                            <td>34</td>
+                                            <td>male</td>
+                                            <td>985</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="table-wrapper">
-                        <table class="data-table">
-                            <!-- Table 2 content -->
-                            <caption><b>Table 3 </b></caption>
-                            <thead>
-                                <tr>
-                                    <th>Table 2 Column 1</th>
-                                    <th>Table 2 Column 2</th>
-                                    <th>Table 2 Column 3</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Table 2 Data 1</td>
-                                    <td>Table 2 Data 2</td>
-                                    <td>Table 2 Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Table 2 Data 4</td>
-                                    <td>Table 2 Data 5</td>
-                                    <td>Table 2 Data 6</td>
-                                </tr>
-                                <!-- Add more rows as needed -->
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- Add more tables as needed -->
                 </div>
-
-            </div>
 
         </div>
     </div>
