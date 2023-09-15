@@ -33,11 +33,11 @@ include("./functions/countData.php");
                     <p><?php echo $countCategoriesQuery; ?></p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
-                <div class="card">
+                <!-- <div class="card">
                     <h2>Card 4</h2>
                     <p>This is the content of Card 4. </p>
                     <a href="#" class="btn">Learn More</a>
-                </div>
+                </div> -->
             </div>
             <br>
             <hr>
