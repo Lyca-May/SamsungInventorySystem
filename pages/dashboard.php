@@ -8,7 +8,7 @@ include("./functions/countData.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Four Cards in a Column</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
 </head>
 
 <body>
@@ -21,23 +21,23 @@ include("./functions/countData.php");
                 <div class="card">
                     <h2>Users</h2>
                     <p><?php echo $countUsersquery; ?></p>
-                    <a href="#" class="btn">Learn More</a>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
                 <div class="card">
                     <h2>Products</h2>
                     <p><?php echo $countProductquery; ?></p>
-                    <a href="#" class="btn">Learn More</a>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
                 <div class="card">
                     <h2>Categories</h2>
                     <p><?php echo $countCategoriesQuery; ?></p>
-                    <a href="#" class="btn">Learn More</a>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
-                <!-- <div class="card">
-                    <h2>Card 4</h2>
-                    <p>This is the content of Card 4. </p>
-                    <a href="#" class="btn">Learn More</a>
-                </div> -->
+                <div class="card">
+                    <h2>Sales</h2>
+                    <p>0</p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
+                </div>
             </div>
             <br>
             <hr>
