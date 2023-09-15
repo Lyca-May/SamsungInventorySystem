@@ -45,7 +45,7 @@ include("./functions/userManagementFunction.php");
                 <span class="close" onclick="toggleForm()">&times;</span>
                 <h2>Add New User</h2>
                 <!-- Your form content goes here -->
-                <form id="addUserForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <form id="addUserForm" action="" method="post">
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" required><br><br>
                     <label for="username">Username:</label>
@@ -74,13 +74,13 @@ include("./functions/userManagementFunction.php");
         <table id="tableID3" class="display">
             <thead>
                 <tr>
-                <th>User ID</th>
-                <th>Name</th>
-                <th>Username</th>
-                <th>User Role</th>
-                <th>Status</th>
-                <th>Last Login</th>
-                <th>Action</th>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>User Role</th>
+                    <th>Status</th>
+                    <th>Last Login</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -114,13 +114,13 @@ include("./functions/userManagementFunction.php");
         <div class="modal-content">
             <span class="close" onclick="closeEditModal()">&times;</span>
             <h2>Edit User</h2>
-            <form action="/functions/update_user_data.php" method="post">
+            <form id="editUserForm">
                 <input type="hidden" id="editUserId" name="id" value="">
                 <label for="editName">Name:</label>
                 <input type="text" id="editName" name="name">
                 <label for="editUsername">Username:</label>
                 <input type="text" id="editUsername" name="username">
-                <button type="submit">Save Changes</button>
+                <button type="button" onclick="submitEditForm()">Save Changes</button>
             </form>
         </div>
     </div>
@@ -128,6 +128,35 @@ include("./functions/userManagementFunction.php");
     <script src="./js/addUsers.js"></script>
     <script src="./js/updateUsers.js"></script>
     <script src="./js/deleteUsers.js"></script>
+
+
+    <script>
+function submitEditForm() {
+    var formData = new FormData(document.getElementById("editUserForm"));
+
+    $.ajax({
+        type: "POST",
+        url: "/functions/update_user_data.php", // Use an absolute path here
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            // Handle success, e.g., show a success message or update the UI
+            alert("User data updated successfully!");
+            // Close the edit modal or perform other actions as needed
+            closeEditModal();
+        },
+        // error: function(xhr, status, error) {
+        //     // Handle errors, e.g., display an error message
+        //     alert("An error occurred: " + error);
+        // }
+    });
+}
+
+function closeEditModal() {
+    // Close the edit modal (you may need to implement this function)
+}
+</script>
 
 
     <script>
@@ -141,6 +170,32 @@ include("./functions/userManagementFunction.php");
         function closeEditModal() {
             document.getElementById('editModal').style.display = 'none';
         }
+    </script>
+
+    <script>
+        document.getElementById("submitForm").addEventListener("click", function() {
+            // Get form data
+            var formData = new FormData(document.getElementById("addUserForm"));
+
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Define the AJAX request
+            xhr.open("POST", "add_user.php", true);
+
+            // Set the callback function to handle the response
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Handle the response here (e.g., show a success message)
+                    alert("User added successfully!");
+                    // You can also reload the current page or perform other actions
+                    // window.location.reload();
+                }
+            };
+
+            // Send the form data
+            xhr.send(formData);
+        });
     </script>
 </body>
 
