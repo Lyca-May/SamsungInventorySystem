@@ -1,0 +1,123 @@
+.container {
+    max-height: calc(100vh - 60px); /* Adjust the value as needed (60px for navbar and sidebar) */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.content {
+    margin-left: 140px; 
+    padding: 20px;
+}
+
+/* Apply styles to the .intro-box container */
+.intro-box {
+    background-color: #2e699c85;
+    color: white; 
+    padding: 10px; 
+    text-align: left;
+    font-size: 18px; 
+    font-weight: bold; 
+    /* border-radius: 10px;  */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; 
+}
+
+
+.intro-text {
+    margin: 0; 
+    text-align: center;
+}
+
+.card-container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.card {
+    background-color:#2e699c1b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 228px; 
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/*Content in Card*/
+
+
+/*Tables*/
+
+/* CSS for table container */
+/* CSS for table container */
+.table-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Center-align tables horizontally */
+    padding: 20px;
+}
+
+/* CSS for each table wrapper */
+.table-wrapper {
+    flex: 1;
+    margin: 10px;
+}
+
+/* CSS for each table */
+.data-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tr:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,7 @@
+/* logo-icon.css */
+.navbar .logo-icon img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* This maintains the aspect ratio */
+    margin: 20px 20px;
+}
+

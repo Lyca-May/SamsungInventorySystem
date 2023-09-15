@@ -1,0 +1,48 @@
+/* Add this CSS to create space between the table and the sidebar/navbar */
+table {
+    margin-top: 20px; /* Adjust the margin-top as needed to create space */
+    width: 100%; /* Ensure the table occupies the full width */
+    table-layout: fixed; /* Prevent the table from expanding beyond its container */
+}
+
+/* Optional: Add this CSS to style the table headers */
+table th {
+    background-color: #2e699c;
+    color: white;
+    text-align: center; /* Center-align text in table headers */
+}
+
+/* Optional: Add this CSS to style the table rows */
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Optional: Add this CSS to style table cells */
+table td {
+    text-align: center; /* Center-align text in table cells */
+}
+
+.datatable-container {
+    margin-top: 60px; /* Adjust the margin-top as needed to create space */
+    margin-left: 300px; /* Adjust the margin-left to position the table */
+    width: 80%; /* Adjust the width as needed */
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+} 
+
+.btn{
+    padding: 10px 40px;
+    background-color: #2e699c;/* Button background color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    float: right;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #2e699cb9;
+}
