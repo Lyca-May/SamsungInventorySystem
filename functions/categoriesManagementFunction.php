@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (mysqli_query($conn, $query)) {
         // User added successfully
-        $response = array("success" => true, "message" => "Category added successfully.");
+        header("Location: ../pages/categories.php");
     } else {
         // Error adding user
         $response = array("success" => false, "message" => "Error: " . mysqli_error($conn));

@@ -18,9 +18,6 @@ include("./functions/categoriesManagementFunction.php");
     <!-- Datatable plugin CSS file -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
 
-    <!-- jQuery library file -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
     <!-- Datatable plugin JS library file -->
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -35,17 +32,16 @@ include("./functions/categoriesManagementFunction.php");
 
 <body>
 
-<div class="col-2">
-<h2>Add New Category</h2>
-            <form id="addUserForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+
+    <div class="datatable-container">
+    <div class="col-2">
+            <h2>Add New Category</h2>
+            <form id="addUserForm" action="./functions/categoriesManagementFunction.php" method="post">
                 <label for="name">Category Name:</label>
                 <input type="text" name="category_name" id="name" required><br><br>
                 <input type="submit" value="Submit">
             </form>
-
-</div>
-    <div class="datatable-container">
-
+    </div>
         <br>
         <br>
         <br>
@@ -83,21 +79,19 @@ include("./functions/categoriesManagementFunction.php");
             <h2>Edit User</h2>
             <form action="/functions/update_user_data.php" method="post">
                 <input type="hidden" id="editUserId" name="id" value="">
-                <label for="editName">Name:</label>
+                <label for="editName">Category Name:</label>
                 <input type="text" id="editName" name="name">
-                <label for="editUsername">Username:</label>
-                <input type="text" id="editUsername" name="username">
                 <button type="submit">Save Changes</button>
             </form>
         </div>
     </div>
 
-   <!-- The Modal -->
-   <div id="editModal" class="modal">
+    <!-- The Modal -->
+    <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeEditModal()">&times;</span>
             <h2>Edit Category</h2>
-            <form action="./functions/update_category_data.php" method="post">
+            <form action="../functions/update_category_data.php" method="post">
                 <input type="hidden" id="editUserId" name="id" value="">
                 <label for="editName">Category Name:</label>
                 <input type="text" id="editName" name="category_name">
@@ -107,6 +101,7 @@ include("./functions/categoriesManagementFunction.php");
     </div>
     
     <script src="./js/deleteCategory.js"></script>
+    <script src="./js/addCategory.js"></script>
 
 
     <script>
