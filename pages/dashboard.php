@@ -26,24 +26,24 @@
             </div>
             <div class="card-container">
                 <div class="card">
-                    <h2>Card 1</h2>
-                    <p>This is the content of Card 1.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h2>Users</h2>
+                    <p><?php echo $countUsersquery; ?></p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
                 <div class="card">
-                    <h2>Card 2</h2>
-                    <p>This is the content of Card 2. </p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h2>Products</h2>
+                    <p><?php echo $countProductquery; ?></p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
                 <div class="card">
-                    <h2>Card 3</h2>
-                    <p>This is the content of Card 3. </p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h2>Categories</h2>
+                    <p><?php echo $countCategoriesQuery; ?></p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
                 <div class="card">
-                    <h2>Card 4</h2>
-                    <p>This is the content of Card 4. </p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h2>Sales</h2>
+                    <p>0</p>
+                    <!-- <a href="#" class="btn">Learn More</a> -->
                 </div>
             </div>
             <br>
